@@ -1,48 +1,44 @@
-/* Header Styling */
-#app-header {
-    background-color: var(--header-bg);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+.transition-effect {
+    transition: padding var(--transition-speed) ease, background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
-.header-container {
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.brand h2 {
-    margin: 0;
-    font-size: 1.8rem;
-    color: var(--primary-color);
-}
-
-.main-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-}
-
-.main-nav a {
-    color: var(--text-dark);
+/* Active Section Link Effects */
+.navbar-nav .nav-link {
     font-weight: 600;
-    transition: color 0.3s ease;
+    color: var(--text-dark) !important;
+    position: relative;
+    padding: 8px 15px !important;
+    margin: 0 5px;
+    transition: color var(--transition-speed) ease;
 }
 
-.main-nav a:hover {
-    color: var(--secondary-color);
+.navbar-nav .nav-link:hover {
+    color: var(--secondary-color) !important;
 }
 
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        gap: 15px;
-    }
+/* ScrollSpy Active State */
+.navbar-nav .nav-link.active {
+    color: var(--secondary-color) !important;
+    background-color: transparent !important;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--secondary-color);
+    transition: all var(--transition-speed) ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link.active::after,
+.navbar-nav .nav-link:hover::after {
+    width: 80%;
+}
+
+.brand-text {
+    letter-spacing: 1px;
 }

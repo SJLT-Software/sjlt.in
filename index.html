@@ -5,115 +5,259 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SJLT USA Textiles</title>
     
+    <link rel="stylesheet" href="assets/libraries/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/libraries/aos.css">
+    
     <link rel="stylesheet" href="assets/css/theme.css">
-    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/footer.css">
 </head>
-<body>
+<body data-spy="scroll" data-target="#main-navbar" data-offset="100">
 
     <header id="app-header"></header>
 
     <main>
-        <section id="home" class="hero-section">
-            <div class="container">
-                <h2 class="var-company-name"></h2>
-                <h3>Since <span class="var-company-since"></span></h3>
-                <p class="var-company-tagline"></p>
-                <p>Manufacturing excellence with a total capacity of 2,40,000 spindles.</p>
+        <section id="home" class="hero-section text-center section-bg" style="background-image: url('assets/images/s3.jpg');">
+            <div class="overlay"></div>
+            <div class="container position-relative z-index-1" data-aos="fade-up">
+                <h1 class="var-company-name display-3 font-weight-bold text-white mb-3 shadow-effect"></h1>
+                <h3 class="text-white mb-4 shadow-effect">Since <span class="var-company-since"></span></h3>
+                <h4 class="text-white font-weight-light shadow-effect">Manufacturing excellence with a total capacity of 2,40,000 spindles.</h4>
             </div>
         </section>
 
-        <section id="about">
+        <section id="about" class="py-5">
             <div class="container">
-                <h2>About Us</h2>
-                <p><span class="var-company-name"></span>, originally established as a multi-unit business in 1994 with an initial capacity of just 7,000 spindles, has grown immensely. We are vertically integrated to cater to retail markets globally.</p>
-                <p>With our core strength in spinning fine yarns, we proudly deliver finished products that stand apart from our competitors and bring unmatched value to our customers. <span class="var-company-description"></span></p>
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                        <div class="image-wrapper hover-effect">
+                            <img src="assets/images/about-1.jpg" loading="lazy" alt="About Us" class="img-fluid rounded shadow">
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="section-header mb-4">
+                            <h2 class="text-primary animated-header">About <span class="var-company-name"></span></h2>
+                        </div>
+                        <p>Originally established as a multi-unit business in 1994 with an initial capacity of just 7,000 spindles, we have grown immensely. Over the years, we have vertically integrated to cater to retail markets globally.</p>
+                        <p class="var-company-description"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="infrastructure" class="py-5 bg-light">
+            <div class="container">
+                <div class="section-header text-center mb-5" data-aos="fade-up">
+                    <h2 class="text-primary animated-header">Infrastructure</h2>
+                </div>
                 
-                <div class="about-divisions">
-                    <div class="card">
-                        <h3>Our Diversified Group</h3>
-                        <ul>
-                            <li><strong>Logistics:</strong> Contractors of bulk transportation.</li>
-                            <li><strong>Granites:</strong> Meticulous quality control and shade-selection.</li>
-                            <li><strong>Water Division:</strong> Wholesale mineral water distribution.</li>
-                            <li><strong>Construction:</strong> Contractors for infrastructure projects.</li>
-                        </ul>
+                <div class="row align-items-center mb-5 infrastructure-row" data-aos="fade-up">
+                    <div class="col-md-5 order-md-2 mb-4 mb-md-0">
+                        <div class="image-wrapper hover-effect">
+                            <img src="assets/images/spinning.jpg" loading="lazy" alt="Spinning Division" class="img-fluid rounded shadow">
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="infrastructure" class="bg-light">
-            <div class="container">
-                <h2>Infrastructure</h2>
-                <div class="grid-3">
-                    <div class="card">
-                        <h3>Spinning Division</h3>
-                        <p>Constant modernization and technology upgrades make us a leading yarn manufacturer.</p>
-                        <ul>
+                    <div class="col-md-7 order-md-1">
+                        <h3 class="text-secondary mb-3">Spinning Division</h3>
+                        <p>Constant modernization and technology upgrades make us a leading yarn manufacturer. Placements of machineries and spindles are well planned in strategic locations with economies of scale in mind.</p>
+                        <ul class="list-unstyled custom-list">
                             <li><strong>Spindles:</strong> 2,40,000</li>
-                            <li><strong>Product Range:</strong> Ne 30s to 120s Combed/Compact; Ne 12s to 30s Open End</li>
+                            <li><strong>Product Range:</strong> Ne 30s to 120s Combed and Compact Single Yarn</li>
                         </ul>
                     </div>
-                    <div class="card">
-                        <h3>Weaving Division</h3>
-                        <p>Producing greige fabric tailored for the finest bedlinens.</p>
-                        <ul>
-                            <li><strong>Production:</strong> 3 million meters/year</li>
+                </div>
+
+                <div class="row align-items-center mb-5 infrastructure-row" data-aos="fade-up">
+                    <div class="col-md-5 mb-4 mb-md-0">
+                        <div class="image-wrapper hover-effect">
+                            <img src="assets/images/weaving.jpg" loading="lazy" alt="Weaving Division" class="img-fluid rounded shadow">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <h3 class="text-secondary mb-3">Weaving Division</h3>
+                        <p>Producing greige fabric tailored for the finest bedlinens available with the latest Picanol Omni Summum looms.</p>
+                        <ul class="list-unstyled custom-list">
+                            <li><strong>Production per year:</strong> 3 million meters</li>
                             <li><strong>Thread Count:</strong> 100 TC to 1500 TC</li>
-                            <li><strong>Weaves:</strong> Sateen, Percale, Twill, Dobby, Oxford</li>
+                            <li><strong>Fabric Weaves:</strong> Plain, Twill, Sateen, Stripes, Oxford, Dobby</li>
                         </ul>
                     </div>
-                    <div class="card">
-                        <h3>Bedlinen Division</h3>
-                        <p>Catering to retail, institutional, and utility bedding sectors.</p>
-                        <ul>
-                            <li><strong>Capacity:</strong> 1000 sheet sets/day</li>
-                            <li><strong>Fibers:</strong> Egyptian, Supima, Organic Cotton, Tencel, Linen</li>
+                </div>
+
+                <div class="row align-items-center infrastructure-row" data-aos="fade-up">
+                    <div class="col-md-5 order-md-2 mb-4 mb-md-0">
+                        <div class="image-wrapper hover-effect">
+                            <img src="assets/images/bedline.jpg" loading="lazy" alt="Premium Bedlinen Product" class="img-fluid rounded shadow">
+                        </div>
+                    </div>
+                    <div class="col-md-7 order-md-1">
+                        <h3 class="text-secondary mb-3">Bedlinen Division</h3>
+                        <p>Catering to retail, institutional, and utility bedding sectors globally with designs in solid and printed products.</p>
+                        <ul class="list-unstyled custom-list">
+                            <li><strong>Production Capacity:</strong> 1000 sheet sets a day</li>
+                            <li><strong>Fiber Composition:</strong> Egyptian cotton, Supima, Organic, Tencel, Linen</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="sustainability">
+        <section class="py-4 bg-white border-top border-bottom">
+            <div class="container text-center certifications-bar" data-aos="zoom-in">
+                <img src="assets/images/abci.jpg" loading="lazy" class="rounded hover-lift" alt="BCI">
+                <img src="assets/images/Bureau.jpg" loading="lazy" class="rounded hover-lift" alt="Bureau Veritas">
+                <img src="assets/images/controlunion.jpg" loading="lazy" class="rounded hover-lift" alt="Control Union">
+                <img src="assets/images/egyptian.jpg" loading="lazy" class="rounded hover-lift" alt="Egyptian Cotton">
+                <img src="assets/images/gots.jpg" loading="lazy" class="rounded hover-lift" alt="GOTS">
+                <img src="assets/images/oekotex.jpg" loading="lazy" class="rounded hover-lift" alt="Oeko-Tex">
+            </div>
+        </section>
+
+        <section id="funfacts" class="py-5 bg-primary text-white text-center">
             <div class="container">
-                <h2>Sustainability Efforts</h2>
-                <p>Go Green and Save Nature. 50% of our energy requirements are met from our own renewable sources, with a goal of achieving 100%.</p>
-                <div class="grid-2">
-                    <div>
-                        <h3>Renewable Energy</h3>
-                        <ul>
-                            <li><strong>Solar Power:</strong> 20 MW capacity generating 90,000 kWh per day.</li>
-                            <li><strong>Wind Energy:</strong> 8.3 MW capacity wind farms.</li>
-                        </ul>
+                <div class="row" data-aos="fade-up">
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <div class="display-4 font-weight-bold"><span class="count-up" data-count-to="impact_employees">0</span></div>
+                        <h5 class="font-weight-light">Employees</h5>
                     </div>
-                    <div>
-                        <h3>Eco-Initiatives</h3>
-                        <ul>
-                            <li><strong>Rainwater Harvesting:</strong> Repurposing water for factory needs and irrigation.</li>
-                            <li><strong>Better Cotton Initiative:</strong> Proud members promoting sustainable farming practices.</li>
-                            <li><strong>Zero Liquid Discharge (ZLD):</strong> Ensures no harmful effluents enter the environment.</li>
-                        </ul>
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <div class="display-4 font-weight-bold"><span class="count-up" data-count-to="impact_customers">0</span>+</div>
+                        <h5 class="font-weight-light">Customers</h5>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="display-4 font-weight-bold"><span class="count-up" data-count-to="impact_tons">0</span>+</div>
+                        <h5 class="font-weight-light">Tons Manufactured</h5>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="bg-light">
+        <section id="sustainability" class="py-5">
             <div class="container">
-                <h2>Contact Us</h2>
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3>Corporate Office / Showroom</h3>
-                        <p><strong>Address:</strong> <span class="var-showroom-address"></span></p>
-                        <p><strong>Phone:</strong> <span class="var-showroom-phone"></span></p>
-                        <p><strong>Email:</strong> <span class="var-company-email"></span></p>
-                        <p><strong>Hours:</strong> <span class="var-showroom-hours"></span></p>
+                <div class="section-header text-center mb-5" data-aos="fade-up">
+                    <h2 class="text-primary animated-header">Sustainability Efforts</h2>
+                    <p class="lead">Go Green and Save Nature</p>
+                </div>
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow-sm hover-effect border-0">
+                            <img src="assets/images/solar.jpg" loading="lazy" class="card-img-top" alt="Solar Power">
+                            <div class="card-body">
+                                <h4 class="card-title text-secondary">Solar Power</h4>
+                                <p class="card-text">20 MW capacity generating 90,000 kWh per day, reducing greenhouse gas emissions and coal dependence.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="contact-form-container">
-                        <iframe src="#" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow-sm hover-effect border-0">
+                            <img src="assets/images/windFeild.jpg" loading="lazy" class="card-img-top" alt="Wind Energy">
+                            <div class="card-body">
+                                <h4 class="card-title text-secondary">Wind Energy</h4>
+                                <p class="card-text">8.3 MW capacity wind farms providing infinitely clean, emission-free renewable energy.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow-sm hover-effect border-0">
+                            <img src="assets/images/rainwater.jpg" loading="lazy" class="card-img-top" alt="Rainwater Harvesting">
+                            <div class="card-body">
+                                <h4 class="card-title text-secondary">Eco-Initiatives</h4>
+                                <p class="card-text">Members of Better Cotton Initiative and operating robust Rainwater Harvesting systems for factory use.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="csr" class="py-5 bg-light">
+            <div class="container">
+                <div class="section-header text-center mb-5" data-aos="fade-up">
+                    <h2 class="text-primary animated-header">Corporate Social Responsibility</h2>
+                    <p class="lead">"It is not enough to be compassionate – you must act."</p>
+                </div>
+                
+                <div class="row align-items-center mb-5" data-aos="fade-up">
+                    <div class="col-md-5 mb-4 mb-md-0">
+                        <img src="assets/images/women.jpg" loading="lazy" alt="Safety and Well-Being" class="img-fluid rounded shadow hover-effect">
+                    </div>
+                    <div class="col-md-7">
+                        <h3 class="text-secondary mb-3">Safety and Well-Being</h3>
+                        <p>We are committed to caring for our employees and their safety is our priority. We take initiative to support them through constant training, workshops and educational programs. We provide family housing for out-of-state workers, bus transportation, hostel facilities for women employees, and canteen facilities for all.</p>
+                    </div>
+                </div>
+
+                <div class="row align-items-center mb-5" data-aos="fade-up">
+                    <div class="col-md-5 order-md-2 mb-4 mb-md-0">
+                        <img src="assets/images/health.jpg" loading="lazy" alt="Medical Projects" class="img-fluid rounded shadow hover-effect">
+                    </div>
+                    <div class="col-md-7 order-md-1">
+                        <h3 class="text-secondary mb-3">Medical Projects</h3>
+                        <p>Our latest Kidney Dialysis project provides 70% low-cost kidney Dialysis services to unprivileged patients suffering from chronic kidney disease. The facility substantially reduces the financial burden for the patients who need the treatment several times a week.</p>
+                    </div>
+                </div>
+
+                <div class="row align-items-center" data-aos="fade-up">
+                    <div class="col-md-5 mb-4 mb-md-0">
+                        <img src="assets/images/education.jpg" loading="lazy" alt="Education" class="img-fluid rounded shadow hover-effect">
+                    </div>
+                    <div class="col-md-7">
+                        <h3 class="text-secondary mb-3">Education</h3>
+                        <p>We constantly thrive for social transformation and engage with the community by adopting neighboring schools and providing them with necessary infrastructure like smart classrooms, regular classrooms, and toilet facilities. Overall we actively participate in their development and well-being.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5">
+            <div class="container">
+                <div class="section-header text-center mb-5" data-aos="fade-up">
+                    <h2 class="text-primary animated-header">Contact Us</h2>
+                    <p>Let's Get In Touch</p>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                        <div class="contact-info bg-white p-4 rounded shadow h-100">
+                            <h4 class="text-secondary mb-4">Corporate Office / Showroom</h4>
+                            <p><strong>Address:</strong> <span class="var-showroom-address"></span></p>
+                            <p><strong>Phone:</strong> <span class="var-showroom-phone"></span></p>
+                            <p><strong>Email:</strong> <span class="var-company-email"></span></p>
+                            <p><strong>Hours:</strong> <span class="var-showroom-hours"></span></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="bg-white p-4 rounded shadow h-100">
+                            <div id="form-result" class="mb-3" style="display: none;"></div>
+                            <form id="contact-form" class="getin_form">
+                                <div class="row">
+                                    <div class="col-md-6 form-group mb-3">
+                                        <input type="text" class="form-control" name="first_name" placeholder="First Name" required>
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <input type="text" class="form-control" name="last_name" placeholder="Last Name" required>
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <input type="tel" class="form-control" name="phone" placeholder="Phone">
+                                    </div>
+                                    <div class="col-12 form-group mb-3">
+                                        <textarea class="form-control" name="message" rows="4" placeholder="Message" required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary px-4 py-2 hover-lift" id="submit_btn">Submit Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row" data-aos="fade-up">
+                    <div class="col-12">
+                        <iframe id="contact-map" src="" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded shadow"></iframe>
                     </div>
                 </div>
             </div>
@@ -123,6 +267,8 @@
     <footer id="app-footer"></footer>
 
     <script src="assets/libraries/jquery-4.0.0.min.js"></script>
+    <script src="assets/libraries/bootstrap.bundle.min.js"></script>
+    <script src="assets/libraries/aos.js"></script>
     <script src="assets/js/variables.js"></script>
     <script src="assets/js/header.js"></script>
     <script src="assets/js/footer.js"></script>

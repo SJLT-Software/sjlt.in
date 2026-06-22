@@ -6,3 +6,5 @@ https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css|bootstra
 https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js|bootstrap.bundle.min.js
 https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js|popper.min.js
 https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js|bootstrap.min.js
+https://unpkg.com/aos@next/dist/aos.css|aos.css
+https://unpkg.com/aos@next/dist/aos.js|aos.js

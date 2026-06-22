@@ -1,24 +1,15 @@
 // Variables to use in codebase
-/*
-This file contains variables that can be used throughout the codebase.
-Since company details may change it will be kept here and referred to entire codebase
-*/
 const variables = {
     // Company Information
     company_name: "SJLT USA Textiles",
-    company_tagline: "World-Class Textile Manufacturing Excellence",
-    company_logo: "assets/images/logo.png",
+    company_logo: "assets/images/logo.jpg",
     company_address_1: "530 Fifth Avenue, Suite 1710",
     company_address_2: "New York, NY 10036",
-    company_phone: "+1 (607) 304-0164",
-    company_phone_alt: "+1 (212) 555-0147",
+    company_phone: "+1 (212) 555-0147",
     company_email: "info@sjltusa.com",
-    company_email_sales: "sales@sjltusa.com",
-    company_website: "www.sjltusa.com",
     company_since: "1994",
     company_description: "Integrated textile manufacturer specializing in fine-count cotton yarn, woven fabrics, and premium bedding products for global markets.",
-    
-    copyright_year: 2026,
+    copyright_year: new Date().getFullYear(),
     copyright_holder: "SJLT USA Textiles LLC",
 
     // Showroom Information
@@ -26,12 +17,16 @@ const variables = {
     showroom_phone: "+1 (212) 555-0147",
     showroom_hours: "Monday - Friday: 9 AM - 6 PM EST",
     
+    // Map & Counters
+    map_location_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.2388270041!2d78.04339127355793!3d11.169944751814967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babd3c08a99534d%3A0x65fd8edcbc65b996!2sSJLT%20Spinning%20Mills%20Pvt%20Ltd!5e0!3m2!1sen!2sus!4v1782158352928!5m2!1sen!2sus",
+    impact_employees: 3000,
+    impact_customers: 150,
+    impact_tons: 200000,
+
     // Social media links
     social_media: {
         Facebook: "https://www.facebook.com/sjltusa",
-        Twitter: "https://www.twitter.com/sjltusa",
-        Linkedin: "https://www.linkedin.com/company/sjlt-usa-textiles",
-        Instagram: "https://www.instagram.com/sjltusa"
+        Linkedin: "https://www.linkedin.com/company/sjlt-usa-textiles"
     },
     
     // Navigation Menu
@@ -40,6 +35,7 @@ const variables = {
         { label: "About Us", link: "#about" },
         { label: "Infrastructure", link: "#infrastructure" },
         { label: "Sustainability", link: "#sustainability" },
-        { label: "Contact", link: "#contact" }
+        { label: "CSR Projects", link: "#csr" },
+        { label: "Contact Us", link: "#contact" }
     ]
 };
