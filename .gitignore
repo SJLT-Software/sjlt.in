@@ -18,7 +18,4 @@ Thumbs.db
 /dist/
 /build/
 
-# Public assets
-/assets/libraries/*
-
 !**/.gitkeep
