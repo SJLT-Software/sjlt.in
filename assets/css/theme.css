@@ -1,0 +1,26 @@
+/* Centralized Theme Variables */
+:root {
+    /* Color Palette */
+    --primary-color: #1F3A52;      /* Deep Navy Blue */
+    --secondary-color: #4CAF50;    /* Eco Green for Sustainability */
+    --accent-color: #D4AF37;       /* Gold/Luxury Accent */
+    
+    /* Backgrounds & Text */
+    --bg-main: #FFFFFF;
+    --bg-light-alt: #F7F9FA;
+    --text-dark: #333333;
+    --text-muted: #666666;
+    --text-light: #FFFFFF;
+    
+    /* Header & Footer */
+    --header-bg: #FFFFFF;
+    --footer-bg: #112233;
+    
+    /* Typography */
+    --font-primary: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    
+    /* Spacing & Layout */
+    --container-width: 1200px;
+    --section-padding: 80px 20px;
+    --border-radius: 6px;
+}

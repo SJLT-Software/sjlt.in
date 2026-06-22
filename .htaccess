@@ -1,0 +1,23 @@
+Options -Indexes
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}\.html -f
+  RewriteRule ^(.*)$ $1.html [NC,L]
+
+  RewriteRule ^bin(/|$) - [R=404,L]
+  RewriteRule ^\.git(/|$) - [R=404,L]
+  RewriteRule ^\.gitignore$ - [R=404,L]
+  RewriteRule ^README\.md$ - [R=404,L]
+</IfModule>

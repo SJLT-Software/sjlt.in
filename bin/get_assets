@@ -1,0 +1,21 @@
+#!/bin/sh
+
+set -e
+
+SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+UNAME=$(uname -s 2>/dev/null || echo unknown)
+
+case "$UNAME" in
+  CYGWIN*|MINGW*|MSYS*)
+    if command -v pwsh >/dev/null 2>&1; then
+      exec pwsh -File "$SCRIPT_DIR/get_assets.ps1" "$@"
+    fi
+    if command -v powershell >/dev/null 2>&1; then
+      exec powershell -File "$SCRIPT_DIR/get_assets.ps1" "$@"
+    fi
+    exec "$SCRIPT_DIR/get_assets.sh" "$@"
+    ;;
+  *)
+    exec "$SCRIPT_DIR/get_assets.sh" "$@"
+    ;;
+esac
