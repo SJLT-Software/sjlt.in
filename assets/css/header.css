@@ -2,41 +2,24 @@
     transition: padding var(--transition-speed) ease, background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
-/* Active Section Link Effects */
+/* Modern Bubble Active Section Link Effects */
 .navbar-nav .nav-link {
     font-weight: 600;
     color: var(--text-dark) !important;
     position: relative;
-    padding: 8px 15px !important;
-    margin: 0 5px;
-    transition: color var(--transition-speed) ease;
-}
-
-.navbar-nav .nav-link:hover {
-    color: var(--secondary-color) !important;
-}
-
-/* ScrollSpy Active State */
-.navbar-nav .nav-link.active {
-    color: var(--secondary-color) !important;
-    background-color: transparent !important;
-}
-
-.navbar-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    background-color: var(--secondary-color);
+    padding: 8px 18px !important;
+    margin: 0 6px;
+    border-radius: 25px; /* Bubble pill shape */
     transition: all var(--transition-speed) ease;
-    transform: translateX(-50%);
+    z-index: 1;
 }
 
-.navbar-nav .nav-link.active::after,
-.navbar-nav .nav-link:hover::after {
-    width: 80%;
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #ffffff !important;
+    background-color: var(--primary-color, #232f5e); /* Uses the theme's primary color */
+    box-shadow: 0 4px 10px rgba(35, 47, 94, 0.2);
+    transform: translateY(-2px);
 }
 
 .brand-text {

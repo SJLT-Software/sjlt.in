@@ -21,9 +21,22 @@ $(document).ready(function() {
     $('.var-showroom-hours').text(variables.showroom_hours);
     $('.var-company-email').html(`<a href="mailto:${variables.company_email}">${variables.company_email}</a>`);
     
-    // Bind Map Source
-    $('#contact-map').attr('src', variables.map_location_url);
-
+    const locationsContainer = $('#dynamic-locations');
+    if (locationsContainer.length && variables.locations) {
+        let locationsHtml = '';
+        variables.locations.forEach((loc) => {
+            locationsHtml += `
+                <div class="contact-info bg-white p-4 rounded shadow mb-4 hover-lift">
+                    <h5 class="text-primary mb-3 font-weight-bold">${loc.type}</h5>
+                    <p class="mb-2"><strong>Address:</strong> ${loc.address}</p>
+                    ${loc.phone ? `<p class="mb-2"><strong>Phone:</strong> ${loc.phone}</p>` : ''}
+                    ${loc.hours ? `<p class="mb-0"><strong>Hours:</strong> ${loc.hours}</p>` : ''}
+                </div>
+            `;
+        });
+        locationsContainer.html(locationsHtml);
+    }
+    
     // Append Back to Top Button
     $('body').append('<a href="#" id="back-to-top" class="btn btn-primary position-fixed shadow" style="bottom: 25px; right: 25px; display: none; z-index: 9999; border-radius: 50%; width: 45px; height: 45px; text-align: center; line-height: 30px; font-size: 20px;">&#8679;</a>');
 

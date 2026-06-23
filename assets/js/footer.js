@@ -10,7 +10,7 @@ $(document).ready(function() {
                 <div class="row">
                     <div class="col-md-4 mb-4">
                         <h5 class="mb-3">${variables.company_name}</h5>
-                        <p class="text-light">${variables.company_description}</p>
+                        <p class="text-light">${variables.company_byline}</p>
                     </div>
                     <div class="col-md-4 mb-4">
                         <h5 class="mb-3">Contact</h5>

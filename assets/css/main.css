@@ -86,13 +86,11 @@ body {
 
 /* Certifications Bar */
 .certifications-bar img {
-    height: 60px;
-    margin: 10px 20px;
-    filter: grayscale(100%);
-    transition: filter var(--transition-speed) ease, transform var(--transition-speed);
+    height: 85px;
+    margin: 15px 25px;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
 .certifications-bar img:hover {
-    filter: grayscale(0%);
     transform: scale(1.1);
 }
