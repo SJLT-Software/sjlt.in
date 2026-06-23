@@ -22,11 +22,19 @@ $(document).ready(function() {
     $('.var-company-email').html(`<a href="mailto:${variables.company_email}">${variables.company_email}</a>`);
     
     const locationsContainer = $('#dynamic-locations');
-    if (locationsContainer.length && variables.locations) {
+    if (locationsContainer.length && variables.locations && variables.locations.length > 0) {
+        
+        // Default the map to the first location
+        $('#contact-map').attr('src', variables.locations[0].map_embed_url);
+
         let locationsHtml = '';
-        variables.locations.forEach((loc) => {
+        variables.locations.forEach((loc, index) => {
+            // Added 'location-card' class, 'cursor-pointer', and a data attribute for the map URL
+            let isActive = index === 0 ? 'border-primary bg-light shadow' : 'border-light shadow-sm';
+            
             locationsHtml += `
-                <div class="contact-info bg-white p-4 rounded shadow mb-4 hover-lift">
+                <div class="contact-info bg-white p-4 rounded mb-4 hover-lift location-card border cursor-pointer ${isActive}" 
+                     data-map-url="${loc.map_embed_url}" style="cursor: pointer; transition: all 0.3s;">
                     <h5 class="text-primary mb-3 font-weight-bold">${loc.type}</h5>
                     <p class="mb-2"><strong>Address:</strong> ${loc.address}</p>
                     ${loc.phone ? `<p class="mb-2"><strong>Phone:</strong> ${loc.phone}</p>` : ''}
@@ -35,8 +43,39 @@ $(document).ready(function() {
             `;
         });
         locationsContainer.html(locationsHtml);
+
+        // Click event to change the map
+        $('.location-card').on('click', function() {
+            // Update styling to show active state
+            $('.location-card').removeClass('border-primary bg-light shadow').addClass('border-light shadow-sm');
+            $(this).removeClass('border-light shadow-sm').addClass('border-primary bg-light shadow');
+            
+            // Update iframe src
+            let newMapUrl = $(this).attr('data-map-url');
+            $('#contact-map').attr('src', newMapUrl);
+        });
     }
+
+    // Explicitly Handle Header Active Bubble State on Scroll
+    // (This fixes the issue where Bootstrap scrollspy fails on dynamically loaded headers)
+    $(window).on('scroll', function() {
+        let scrollPos = $(window).scrollTop() + 100; // Offset for fixed header
+        
+        $('section').each(function() {
+            let top = $(this).offset().top;
+            let bottom = top + $(this).outerHeight();
+
+            if (scrollPos >= top && scrollPos <= bottom) {
+                let currentId = $(this).attr('id');
+                // Remove active class from all nav links
+                $('.navbar-nav .nav-link').removeClass('active');
+                // Add active class to the current section's link
+                $(`.navbar-nav .nav-link[href="#${currentId}"]`).addClass('active');
+            }
+        });
+    });
     
+
     // Append Back to Top Button
     $('body').append('<a href="#" id="back-to-top" class="btn btn-primary position-fixed shadow" style="bottom: 25px; right: 25px; display: none; z-index: 9999; border-radius: 50%; width: 45px; height: 45px; text-align: center; line-height: 30px; font-size: 20px;">&#8679;</a>');
 
