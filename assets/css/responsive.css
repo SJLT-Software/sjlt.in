@@ -5,16 +5,31 @@
     }
 }
 
+/* --- EXTRA LARGE MONITOR SCALING (27" - 32" screens) --- */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1500px !important;
+    }
+    /* Base font size bump: scales ALL text, margins, and padding up by ~12% */
+    html {
+        font-size: 18px; 
+    }
+}
+
 @media (min-width: 1920px) {
     .container {
         max-width: 1750px !important;
     }
-    
-    /* Slightly bump up typography for massive screens */
-    .hero-section .display-3 {
-        font-size: 5rem; 
+    /* Massive screens: scales ALL text, margins, and padding up by ~25% */
+    html {
+        font-size: 20px; 
     }
-    body {
-        font-size: 1.1rem;
+    
+    /* Make the hero text exceptionally large */
+    .hero-section .display-3 {
+        font-size: 5.5rem; 
+    }
+    .hero-section h3 {
+        font-size: 2.5rem;
     }
 }

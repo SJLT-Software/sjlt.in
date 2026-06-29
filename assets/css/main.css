@@ -98,8 +98,8 @@ body {
 
 .certifications-bar img {
     /* clamp(MIN, PREFERRED, MAX) smoothly scales the logos based on screen width */
-    height: clamp(55px, 6vw, 95px); 
-    margin: clamp(10px, 2vw, 25px);
+    height: clamp(60px, 8vw, 140px); 
+    margin: clamp(10px, 3vw, 35px);
     transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
