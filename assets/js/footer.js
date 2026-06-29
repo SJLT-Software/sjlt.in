@@ -45,6 +45,7 @@ $(document).ready(function() {
                     <div class="col-md-4 mb-4">
                         <h5 class="mb-3">Contact</h5>
                         <p class="text-light mb-1">${primaryAddress}</p>
+                        <p class="text-light mb-1">Phone: <a href="tel:${variables.company_phone}" class="text-white text-decoration-none hover-effect">${variables.company_phone}</a></p>
                         <p class="text-light mt-2 mb-0">Email: <a href="mailto:${variables.company_email}" class="text-white text-decoration-none hover-effect">${variables.company_email}</a></p>
                     </div>
                     

@@ -10,6 +10,7 @@ const variables = {
     copyright_holder_us: "SJLT Textiles LLC",
 
     // Global Contact
+    company_phone: "+91 9500988297",
     company_email: "marketing@sjlt.in",
     
     // Multiple Locations (replaces static showroom variables)
