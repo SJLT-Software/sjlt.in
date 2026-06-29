@@ -13,6 +13,17 @@ const variables = {
     company_email: "marketing@sjlt.in",
     
     // Multiple Locations (replaces static showroom variables)
+    /*
+    Address format:
+    {
+        type: "Showroom / Office Type",
+        address: "Full Address",
+        phone[Optional]: "Phone Number",
+        hours[Optional]: "Operating Hours",
+        google_maps_link[Optional/Default: '#']: "Google Maps Link",
+        map_embed_url[Optional/Default: '#']: "Google Maps Embed URL"
+    }
+    */
     locations: [
         {
             type: "US Corporate Office / Showroom",
@@ -41,16 +52,12 @@ const variables = {
         {
             type: "Unit II",
             address: "Karugudi Village, By Pass - Manthoppu, Thathaiyengarpettai (via), Musiri (Tk), Trichy District Tamil Nadu, India - 621210",
-            phone: "+91 9500988297",
-            hours: "24/7 Operations",
             google_maps_link: "#",
             map_embed_url: "#"
         },
         {
             type: "Dindigul Unit",
             address: "Dindigul Karur NH-7, Kalvarpatti village, Vedasandur taluk, Dindigul District, Tamil Nadu, India - 624710",
-            phone: "+91 9500988297",
-            hours: "24/7 Operations",
             google_maps_link: "#"
         },
 
