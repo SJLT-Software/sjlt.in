@@ -1,0 +1,20 @@
+/* Extra Large Monitor Scaling (27" - 32" screens) */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1500px !important;
+    }
+}
+
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1750px !important;
+    }
+    
+    /* Slightly bump up typography for massive screens */
+    .hero-section .display-3 {
+        font-size: 5rem; 
+    }
+    body {
+        font-size: 1.1rem;
+    }
+}

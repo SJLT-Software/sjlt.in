@@ -38,7 +38,12 @@ body {
 }
 
 .hero-section {
-    padding: 150px 0;
+    /* Set height to exactly 100% of the viewport minus the 76px header */
+    height: calc(100vh - 76px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Removed the old 150px hardcoded padding */
 }
 
 .overlay {
@@ -47,10 +52,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(35, 47, 94, 0.65); /* Primary color overlay */
+    /* Increased opacity from 0.65 to 0.85 to darken bright white backgrounds */
+    background: rgba(35, 47, 94, 0.85); 
     z-index: 0;
 }
-
 .shadow-effect {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
@@ -80,135 +85,25 @@ body {
 
 /* ====================================================================== Infra list options ====================================== */
 
-/* Infrastructure Lists */
 
-/* Option-1 (Weaving) */
-.custom-list li {
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-}
-
-/* Option-2 (Spinning) */
-.modern-list li {
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 12px 20px;
-    margin-bottom: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    border-left: 4px solid var(--secondary-color); /* Uses your theme's secondary color */
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-    display: flex;
-    align-items: center;
-}
-
-.modern-list li:hover {
-    transform: translateX(8px); /* Slides slightly to the right on hover */
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-.modern-list-icon {
-    font-size: 1.25rem;
-    color: var(--primary-color);
-    margin-right: 18px;
-    min-width: 25px;
-    text-align: center;
-}
-
-.modern-list-content strong {
-    display: block;
-    color: var(--text-dark);
-    font-size: 0.95rem;
-    margin-bottom: 2px;
-    font-weight: 700;
-}
-
-.modern-list-content span {
-    display: block;
-    color: #6c757d; /* Bootstrap text-muted */
-    font-size: 0.9rem;
-    line-height: 1.4;
-}
-
-
-/* Compact Table-style List Alternative */
-
-/* Option-3 (Bed-Linen) */
-.compact-table-list {
-    margin-top: 1.5rem;
-    border: 1px solid #e9ecef;
-    border-radius: 8px;
-    overflow: hidden; /* Ensures zebra stripes stay inside rounded corners */
-}
-
-.compact-table-list li {
-    display: flex;
-    align-items: center;
-    padding: 10px 16px;
-    font-size: 0.95rem;
-    transition: background-color var(--transition-speed) ease;
-    border-bottom: 1px solid #e9ecef;
-}
-
-.compact-table-list li:last-child {
-    border-bottom: none;
-}
-
-/* Zebra striping for alternate rows */
-.compact-table-list li:nth-child(even) {
-    background-color: #f8f9fa; /* Bootstrap light gray */
-}
-
-.compact-table-list li:nth-child(odd) {
-    background-color: #ffffff;
-}
-
-/* Subtle hover interaction */
-.compact-table-list li:hover {
-    background-color: #e2e6ea;
-}
-
-.compact-table-label {
-    flex: 0 0 40%; /* Label takes up 40% of the row */
-    font-weight: 600;
-    color: var(--primary-color);
-    display: flex;
-    align-items: center;
-}
-
-.compact-table-label i {
-    margin-right: 12px;
-    color: var(--secondary-color);
-    width: 20px; /* Keeps all icons perfectly aligned vertically */
-    text-align: center;
-}
-
-.compact-table-value {
-    flex: 1; /* Value takes the remaining 60% */
-    color: var(--text-dark);
-    text-align: right;
-}
-
-/* Mobile responsiveness: Stack rows if the screen is too small */
-@media (max-width: 768px) {
-    .compact-table-list li {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .compact-table-value {
-        text-align: left;
-        margin-top: 4px;
-        padding-left: 32px; /* Aligns text with the label, skipping the icon space */
-    }
-}
 /* ============================================================ */
 
 /* Certifications Bar */
+.certifications-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 .certifications-bar img {
-    height: 85px;
-    margin: 15px 25px;
+    /* clamp(MIN, PREFERRED, MAX) smoothly scales the logos based on screen width */
+    height: clamp(55px, 6vw, 95px); 
+    margin: clamp(10px, 2vw, 25px);
     transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
 .certifications-bar img:hover {
     transform: scale(1.1);
 }
+
