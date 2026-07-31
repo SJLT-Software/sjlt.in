@@ -21,21 +21,35 @@
     <link rel="stylesheet" href="assets/css/about.css">
     <link rel="stylesheet" href="assets/css/infrastructure.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/hero-section.css">
 </head>
 <body data-spy="scroll" data-target="#main-navbar" data-offset="100">
 
     <header id="app-header"></header>
 
     <main>
-        <section id="home" class="hero-section text-center section-bg" style="background-image: url('assets/images/s3.jpg');">
-            <div class="overlay"></div>
-            <div class="container position-relative z-index-1" data-aos="fade-up">
-                <h1 class="var-company-name display-3 font-weight-bold text-white mb-3 shadow-effect"></h1>
-                <h3 class="text-white mb-4 shadow-effect">Since <span class="var-company-since"></span></h3>
-                <h4 class="text-white font-weight-light shadow-effect">Manufacturing excellence with a total capacity of 2,40,000 spindles.</h4>
+        <section id="home" class="hero-section container-fluid p-0">
+    <div class="row g-0 h-100">
+        
+        <div class="col-lg-4 hero-content-side d-flex flex-column justify-content-center px-4 px-xl-5 text-white">
+            <div data-aos="fade-up" data-aos-duration="1200">
+                <span class="text-uppercase text-muted fw-bold tracking-wider mb-2 d-block" id="hero-since">Since 1994</span>
+                <h1 class="display-4 fw-bold mb-3" id="hero-title">SJLT USA</h1>
+                <p class="lead mb-5" id="hero-subtitle">World-Class Textile Manufacturing Excellence.</p>
+                <a href="#about" class="btn btn-primary btn-lg rounded-pill px-5 py-3 pagescroll">Explore Our Legacy</a>
             </div>
-        </section>
+        </div>
 
+        <div class="col-lg-8 hero-video-side position-relative">
+            <video autoplay loop muted playsinline class="hero-split-video" poster="assets/images/s3.jpg">
+                <source src="assets/videos/hero-background.mp4" type="video/mp4">
+                </video>
+            
+            <div class="video-overlay"></div>
+        </div>
+
+    </div>
+</section>
         <section id="about" class="py-5">
             <div class="container">
                 <div class="row align-items-center">
@@ -391,6 +405,7 @@
     <script src="assets/js/header.js"></script>
     <script src="assets/js/footer.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/fonts.js"></script>
+    <!-- Temp Script to pick Font -->
+    <!-- <script src="assets/js/fonts.js"></script> -->
     </body>
 </html>

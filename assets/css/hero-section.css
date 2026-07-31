@@ -1,0 +1,75 @@
+/* --- Split Hero Section --- */
+.hero-section {
+    /* Accommodates the fixed header height */
+    height: calc(100vh - 76px); 
+    min-height: 600px;
+    background-color: #0f172a; /* Matches the left side for a seamless transition */
+}
+
+/* Left side dark background */
+.hero-content-side {
+    background-color: #0f172a; /* Deep slate blue/black */
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Right side video container */
+.hero-video-side {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    /* The Fallback Background Image */
+    background-color: #000; 
+    background-image: url('assets/images/s3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Forces the video to cover its column perfectly */
+.hero-split-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Optional: Slight dark gradient over the video so it doesn't clash with the dark left side */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #0f172a 0%, rgba(15, 23, 42, 0.2) 20%, rgba(0,0,0,0) 100%);
+    z-index: 1;
+}
+
+/* --- Mobile Responsiveness --- */
+/* For screens smaller than large desktop (tablets and phones) */
+@media (max-width: 991.98px) {
+    .hero-section {
+        height: auto; /* Allow natural stacking */
+    }
+    
+    .hero-content-side {
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+        height: auto;
+        order: 1; /* Keep text on top */
+    }
+    
+    .hero-video-side {
+        height: 50vh; /* Give the video a specific height on mobile */
+        min-height: 300px;
+        order: 2; /* Move video below the text */
+    }
+    
+    /* Hide the gradient overlay on mobile since the sections are stacked vertically */
+    .video-overlay {
+        background: linear-gradient(180deg, #0f172a 0%, rgba(15, 23, 42, 0) 30%);
+    }
+}

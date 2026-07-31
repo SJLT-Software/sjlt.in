@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Times New Roman', serif;
     color: var(--text-dark);
     padding-top: 76px; /* Offset for fixed header */
 }

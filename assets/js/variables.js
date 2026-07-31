@@ -26,14 +26,14 @@ const variables = {
     }
     */
     locations: [
-        {
-            type: "US Corporate Office / Showroom",
-            address: "230 Fifth Avenue, New York, NY 10036",
-            phone: "+91 9500988297",
-            hours: "Mon - Fri: 9 AM - 6 PM EST",
-            google_maps_link: "#",
-            map_embed_url: "#"
-        },
+        // {
+        //     type: "US Corporate Office / Showroom",
+        //     address: "230 Fifth Avenue, New York, NY 10036",
+        //     phone: "+91 9500988297",
+        //     hours: "Mon - Fri: 9 AM - 6 PM EST",
+        //     google_maps_link: "#",
+        //     map_embed_url: "#"
+        // },
         {
             type: "India Head Office",
             address: "2E, Second Floor, Prince Arcade, 22A, Cathedral Road, Chennai, Tamil Nadu, India - 600086",
@@ -50,17 +50,17 @@ const variables = {
             google_maps_link: "#",
             map_embed_url: "#"
         },
-        {
-            type: "Unit II",
-            address: "Karugudi Village, By Pass - Manthoppu, Thathaiyengarpettai (via), Musiri (Tk), Trichy District Tamil Nadu, India - 621210",
-            google_maps_link: "#",
-            map_embed_url: "#"
-        },
-        {
-            type: "Dindigul Unit",
-            address: "Dindigul Karur NH-7, Kalvarpatti village, Vedasandur taluk, Dindigul District, Tamil Nadu, India - 624710",
-            google_maps_link: "#"
-        },
+        // {
+        //     type: "Unit II",
+        //     address: "Karugudi Village, By Pass - Manthoppu, Thathaiyengarpettai (via), Musiri (Tk), Trichy District Tamil Nadu, India - 621210",
+        //     google_maps_link: "#",
+        //     map_embed_url: "#"
+        // },
+        // {
+        //     type: "Dindigul Unit",
+        //     address: "Dindigul Karur NH-7, Kalvarpatti village, Vedasandur taluk, Dindigul District, Tamil Nadu, India - 624710",
+        //     google_maps_link: "#"
+        // },
 
     ],
     
