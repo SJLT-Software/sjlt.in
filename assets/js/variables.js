@@ -2,7 +2,7 @@
 const variables = {
     // Company Information
     company_name: "SJLT Group Of Mills",
-    company_logo: "assets/images/logo.jpg",
+    company_logo: "assets/images/logo-bg-png.jpg",
     company_since: "1994",
     company_byline: "Since 1994",
     company_description: "SJLT, a multi unit business established in the year 1994 with an initial capacity of just 7000 spindles. Over the years, under the strong leadership of Mr. Jagadeesan Veerappan ,Chairman and Mr.Selvadurai Veerappan, Managing Director, the mill has now a total capacity of 2,40,000 spindles and vertically integrated to cater to the retail markets. With our core strength in spinning fine yarns, we are now proud to deliver finished products that can stand apart from our competitors and bring unmatched value to our customers.",
