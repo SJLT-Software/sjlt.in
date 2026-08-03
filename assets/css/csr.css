@@ -1,44 +1,27 @@
-/* CSR Section Layout - Mirroring Sustainability for consistency */
-#csr-container {
-    background-color: #ffffff; /* Alternating background color from sustainability */
+/* --- CSR Layout --- */
+#csr {
+    background-color: var(--bg-light); /* Contrast against the white sustainability section */
 }
 
-#csr-container .sticky-container {
-    position: relative;
-    align-items: flex-start; 
+#csr .sticky-layout-row {
+    align-items: stretch;
 }
 
-#csr-container .sticky-content {
+#csr .sticky-content {
+    position: -webkit-sticky;
     position: sticky;
     top: 120px; 
-    padding-bottom: 2rem;
+    height: max-content;
 }
 
-/* Card Styling */
-#csr-container .card-image-wrapper {
-    height: 250px;
-    overflow: hidden;
-}
-
-#csr-container .object-fit-cover {
+#csr .object-fit-cover {
     object-fit: cover;
-    height: 100%;
 }
 
-#csr-container .hover-lift {
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-}
-
-#csr-container .hover-lift:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-}
-
-/* Responsive */
+/* --- Mobile Responsiveness --- */
 @media (max-width: 991.98px) {
-    #csr-container .sticky-content {
+    #csr .sticky-content {
         position: relative;
         top: 0;
-        margin-bottom: 1rem;
     }
 }

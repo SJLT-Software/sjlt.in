@@ -113,7 +113,7 @@ const variables = {
         },
         csr: {
             title: 'Corporate Social Responsibility',
-            description: 'SJLT is committed to making a positive impact on society through various initiatives and projects that focus on the well-being of our employees, the community, and the environment. Our CSR efforts are aimed at creating a sustainable future and improving the quality of life for those we serve.',
+            description: '\"It is not enough to be compassionate - you must act.\"<br>- The Dalai Lama',
             subsections: [
                 {
                     title: 'Safety and Well-Being',
