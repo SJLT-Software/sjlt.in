@@ -83,5 +83,54 @@ const variables = {
         { label: "Sustainability", link: "#sustainability" },
         { label: "CSR Projects", link: "#csr" },
         { label: "Contact Us", link: "#contact" }
-    ]
+    ],
+    sections: {
+        sustainability: {
+            title: 'Sustainability Efforts',
+            description: 'Go Green and Save Nature',
+            subsections: [
+                {
+                    title: "Solar Power",
+                    image: "assets/images/solar.jpg",
+                    description: "Solar rooftop panels and solar farms are installed with a capacity of 20 MW generating energy of 90000 kWh per day. This reduces green house gas emissions and also our dependence on coal to achieve climate change targets."
+                },
+                {
+                    title: "Wind Energy",
+                    image: "assets/images/windFeild.jpg",
+                    description: "Our Wind farms in remote areas are installed with a capacity of 8.3 MW generating energy of 38356 kWh per day. Another green power technology that is carbon emission free, pollution free, toxic waste free and infinitely clean source of renewable energy that is freely available from wind."
+                },
+                {
+                    title: "Rainwater Harvesting",
+                    image: "assets/images/rainwater.jpg",
+                    description: "We engage in traditional rainwater harvesting by collecting, storing, conserving and repurposing it for our employees, factory needs and for irrigation which would otherwise fall back onto the ground or drain away. Renewable water source also reduces the pressure on processed supply water which enhances the green living and lowers the ecological foot print."
+                },
+                {
+                    title: "Better Cotton Initiative",
+                    image: "assets/images/bci.jpg",
+                    description: "We are a member of the world’s leading sustainability organization that promotes sustainable cotton farming practices like proper crop protection, minimal water usage, ways to improve soil fertility and healthy labor management. There is also economic development in cotton communities while protecting and restoring the environment."
+                }
+            ]
+        },
+        csr: {
+            title: 'Corporate Social Responsibility',
+            description: 'SJLT is committed to making a positive impact on society through various initiatives and projects that focus on the well-being of our employees, the community, and the environment. Our CSR efforts are aimed at creating a sustainable future and improving the quality of life for those we serve.',
+            subsections: [
+                {
+                    title: 'Safety and Well-Being',
+                    image: 'assets/images/women.jpg',
+                    description: 'We are committed to caring for our employees and their safety is our priority. We take initiative to support them through constant training, workshops and educational programs that have instilled confidence and independence in their personalities. Fire Safety and First Aid trainings are mandatory for them. Medical checkups and vaccination camps are organized for their health. We provide family housing for out-of-state workers, bus transportation for local employees, hostel facilities for women employees and canteen facilities for all.'
+                },
+                {
+                    title: 'Medical Projects',
+                    image: 'assets/images/health.jpg',
+                    description: 'Our latest Kidney Dialysis project provides 70% low cost kidney Dialysis services to unprivileged patients suffering from chronic kidney disease. The facility substantially reduces the financial burden for the patients who need the treatment several times a week.'
+                },
+                {
+                    title: 'Education',
+                    image: 'assets/images/education.jpg',
+                    description: 'We constantly thrive for social transformation and engaging with community by adopting neighbouring schools and providing them with necessary infrastructure like smart classrooms, regular classrooms and toilet facilities. Overall we actively participate in their development and well-being.'
+                }
+            ]
+        }
+    }
 };

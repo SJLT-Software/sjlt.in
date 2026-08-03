@@ -21,7 +21,7 @@
     position: relative;
     /* The Fallback Background Image */
     background-color: #000; 
-    background-image: url('assets/images/s3.jpg');
+    background-image: url('/assets/images/s3.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
