@@ -1,120 +1,81 @@
-/* Infrastructure Lists */
-
-/* Option-1 (Weaving) */
-.custom-list li {
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
+/* Custom Scrollbar for long content inside the cards */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #dee2e6;
+    border-radius: 10px;
 }
 
-/* Option-2 (Spinning) */
-.modern-list li {
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 12px 20px;
-    margin-bottom: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    border-left: 4px solid var(--secondary-color); /* Uses your theme's secondary color */
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+/* =========================================================
+   LAYOUT OPTION 1: VERTICAL STICKY STACKING (DEFAULT)
+   ========================================================= */
+/* .stack-container {
+    padding-bottom: 10vh; 
+}
+
+.cards-wrapper {
+    position: relative;
+}
+
+.stack-card {
+    position: sticky;
+    max-height: 80vh;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+ */
+
+/* =========================================================
+   LAYOUT OPTION 2: HORIZONTAL SCROLL SNAP
+   To use this, COMMENT OUT the "LAYOUT OPTION 1" section above, 
+   and UNCOMMENT the section below.
+   ========================================================= */
+
+
+.cards-wrapper {
     display: flex;
-    align-items: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    scrollbar-width: none; 
 }
-
-.modern-list li:hover {
-    transform: translateX(8px); /* Slides slightly to the right on hover */
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+.cards-wrapper::-webkit-scrollbar {
+    display: none; 
 }
-
-.modern-list-icon {
-    font-size: 1.25rem;
-    color: var(--primary-color);
-    margin-right: 18px;
-    min-width: 25px;
-    text-align: center;
-}
-
-.modern-list-content strong {
-    display: block;
-    color: var(--text-dark);
-    font-size: 0.95rem;
-    margin-bottom: 2px;
-    font-weight: 700;
-}
-
-.modern-list-content span {
-    display: block;
-    color: #6c757d; /* Bootstrap text-muted */
-    font-size: 0.9rem;
-    line-height: 1.4;
+.stack-card {
+    flex: 0 0 90%; 
+    scroll-snap-align: center;
+    max-height: 80vh;
+    margin-bottom: 0 !important; 
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 
-/* Compact Table-style List Alternative */
-
-/* Option-3 (Bed-Linen) */
-.compact-table-list {
-    margin-top: 1.5rem;
-    border: 1px solid #e9ecef;
-    border-radius: 8px;
-    overflow: hidden; /* Ensures zebra stripes stay inside rounded corners */
-}
-
-.compact-table-list li {
-    display: flex;
-    align-items: center;
-    padding: 10px 16px;
-    font-size: 0.95rem;
-    transition: background-color var(--transition-speed) ease;
-    border-bottom: 1px solid #e9ecef;
-}
-
-.compact-table-list li:last-child {
-    border-bottom: none;
-}
-
-/* Zebra striping for alternate rows */
-.compact-table-list li:nth-child(even) {
-    background-color: #f8f9fa; /* Bootstrap light gray */
-}
-
-.compact-table-list li:nth-child(odd) {
-    background-color: #ffffff;
-}
-
-/* Subtle hover interaction */
-.compact-table-list li:hover {
-    background-color: #e2e6ea;
-}
-
-.compact-table-label {
-    flex: 0 0 40%; /* Label takes up 40% of the row */
-    font-weight: 600;
-    color: var(--primary-color);
-    display: flex;
-    align-items: center;
-}
-
-.compact-table-label i {
-    margin-right: 12px;
-    color: var(--secondary-color);
-    width: 20px; /* Keeps all icons perfectly aligned vertically */
-    text-align: center;
-}
-
-.compact-table-value {
-    flex: 1; /* Value takes the remaining 60% */
-    color: var(--text-dark);
-    text-align: right;
-}
-
-/* Mobile responsiveness: Stack rows if the screen is too small */
-@media (max-width: 768px) {
-    .compact-table-list li {
-        flex-direction: column;
-        align-items: flex-start;
+/* --- Mobile Responsiveness --- */
+@media (max-width: 991.98px) {
+    .stack-card {
+        position: relative; /* Disables sticky/snap on mobile */
+        top: 0 !important; 
+        max-height: none;
+        flex: 1 1 100%;
     }
-    .compact-table-value {
-        text-align: left;
-        margin-top: 4px;
-        padding-left: 32px; /* Aligns text with the label, skipping the icon space */
+    
+    .stack-card .custom-scrollbar {
+        max-height: none !important;
+        overflow-y: visible !important;
+    }
+
+    .stack-card .row {
+        flex-direction: column-reverse;
+    }
+    
+    .stack-card .col-lg-6:nth-child(2) {
+        display: block !important;
+        min-height: 250px !important;
     }
 }

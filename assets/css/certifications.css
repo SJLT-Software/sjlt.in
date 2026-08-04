@@ -1,0 +1,52 @@
+/* Infinite Marquee Animation */
+.marquee-wrapper {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.marquee-track {
+    display: inline-flex;
+    width: max-content;
+    animation: scrollLogos 30s linear infinite;
+}
+
+/* Pause the scrolling if the user hovers to look closer */
+.marquee-wrapper:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes scrollLogos {
+    from { transform: translateX(0); }
+    to { transform: translateX(-33.3333%); } /* Shifts exactly one "set" of logos */
+}
+
+/* Premium B2B Logo Treatment: Colored by default */
+.cert-logo {
+    height: 80px; 
+    width: auto;
+    object-fit: contain;
+    filter: opacity(0.9); /* Slight opacity so hover makes them "pop" */
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.cert-logo:hover {
+    filter: opacity(1);
+    transform: scale(1.05);
+}
+
+/* Edge fading masks */
+.marquee-mask-left {
+    width: 10%;
+    background: linear-gradient(to right, white, transparent);
+}
+.marquee-mask-right {
+    width: 10%;
+    background: linear-gradient(to left, white, transparent);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .cert-logo { height: 50px; }
+    .marquee-track { animation-duration: 20s; }
+}
