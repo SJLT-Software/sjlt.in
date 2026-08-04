@@ -1,0 +1,27 @@
+/* --- CSR Layout --- */
+#csr {
+    background-color: var(--bg-light); /* Contrast against the white sustainability section */
+}
+
+#csr .sticky-layout-row {
+    align-items: stretch;
+}
+
+#csr .sticky-content {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 120px; 
+    height: max-content;
+}
+
+#csr .object-fit-cover {
+    object-fit: cover;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 991.98px) {
+    #csr .sticky-content {
+        position: relative;
+        top: 0;
+    }
+}

@@ -1,13 +1,21 @@
 html, body {
-    overflow-x: hidden;
     width: 100%;
     
 }
 
 body {
-    font-family: 'Times New Roman', serif;
+    font-family: var(--font-primary);
     color: var(--text-dark);
     padding-top: 76px; /* Offset for fixed header */
+}
+
+#home, 
+#about, #about-option-2, #about-option-3,
+#infrastructure,
+#certifications, 
+#funfacts,
+#contact {
+    overflow-x: hidden;
 }
 
 /* Section Header Animations */
