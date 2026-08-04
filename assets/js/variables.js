@@ -5,7 +5,9 @@ const variables = {
     company_logo: "assets/images/logo-bg-png.jpg",
     company_since: "1994",
     company_byline: "Since 1994",
-    company_description: "SJLT, a multi unit business established in the year 1994 with an initial capacity of just 7000 spindles. Over the years, under the strong leadership of Mr. Jagadeesan Veerappan ,Chairman and Mr.Selvadurai Veerappan, Managing Director, the mill has now a total capacity of 2,40,000 spindles and vertically integrated to cater to the retail markets. With our core strength in spinning fine yarns, we are now proud to deliver finished products that can stand apart from our competitors and bring unmatched value to our customers.",
+    get company_description() {
+        return variables.sections.about.description;
+    },
     copyright_year_us: "2026",
     copyright_holder_us: "SJLT Textiles LLC",
 
@@ -85,6 +87,79 @@ const variables = {
         { label: "Contact Us", link: "#contact" }
     ],
     sections: {
+        about: {
+            title: "About SJLT",
+            image: "assets/images/about-1.jpg",
+            description: "SJLT, a multi unit business established in the year 1994 with an initial capacity of just 7000 spindles. Over the years, under the strong leadership of Mr. Jagadeesan Veerappan ,Chairman and Mr.Selvadurai Veerappan, Managing Director, the mill has now a total capacity of 2,40,000 spindles and vertically integrated to cater to the retail markets. With our core strength in spinning fine yarns, we are now proud to deliver finished products that can stand apart from our competitors and bring unmatched value to our customers.",
+        },
+        infrastructure: {
+            title: "Infrastructure",
+            description: "",
+            subsections: [
+                {
+                    title: "Spinning Division",
+                    image: "assets/images/spinning.jpg",
+                    description: "Constant modernization and technology upgrades make us a leading yarn manufacturer. Placements of machineries and spindles are well planned in strategic locations with economies of scale in mind.",
+                    stats: [
+                        { label: "Spindles", value: 240000 },
+                        { label: "Comber / Draw Frame", value: "LK 64, Reiter D50" },
+                        { label: "Roving Machine / Ring Frame", value: "LMW with autodoffers and linkconers" },
+                        { label: "Compact Spinning", value: "Suessen Elite" },
+                        { label: "Autoconer", value: "Schlafhorst 338, Murata 21 C, Muratec Q-PRO" },
+                        { label: "Open End Spinning", value: "Rieter BT923,3500 rotors" },
+                        { label: "Yarn Clearers", value: "Uster Quantum Siro 3" },
+                        { label: "Product Range", value: "Ne 30s to 120s Combed and Compact Single Yarn; Ne 12s to 30s count Open End Yarns" },
+                    ]
+                },
+                {
+                    title: "Weaving Division",
+                    image: "assets/images/weaving.jpg",
+                    description: "Producing greige fabric tailored for the finest bedlinens available with the latest Picanol Omni Summum looms.",
+                    stats: [
+                        { label: "Looms", value: "Picanol omni summum" },
+                        { label: "Warping", value: "Karl Meyer" },
+                        { label: "Sizing", value: "Karl Meyer Prosize" },
+                        { label: "Production per year", value: "3 million meters" },
+                        { label: "Thread Count", value: "100 TC to 1500 TC" },
+                        { label: "Fabric Weaves", value: "Plain, Twill, Drill, Sateen, Satin, Stripes, waffle, Rib stop, Herringbone, Swiss dot, Gabardine, and Oxford and Dobby design weaves" },
+                    ]
+                },
+                {
+                    title: "Bedlinen Division",
+                    image: "assets/images/bedline.jpg",
+                    description: "Catering to retail, institutional, and utility bedding sectors globally with designs in solid and printed products.",
+                    stats: [
+                        { label: "Thread Count", value: "100 TC to 1500 TC" },
+                        { label: "Capacity", value: "1000 Sheet Sets / Day" },
+                        { label: "Fabric Stitches", value: "Flat sheet, fitted sheet, Duvet, Quilts, Comforters, Pillow Covers and Cushions" },
+                        { label: "Composition", value: "Egyptian Cotton, Supima, Organic, Tencel, Linen" },
+                        { label: "Fabric Finishes", value: "Anti-bacterial, Wrinkle free, Water repellant, Stain repellant, Anti-viral" },
+                    ]
+                }
+            ]
+        },
+        certifications: {
+            title: "",
+            description: "",
+            certifications: [
+                { name: "BCI", image: "assets/images/abci.jpg" },
+                { name: "Bureau Veritas", image: "assets/images/Bureau.jpg" },
+                { name: "Control Union", image: "assets/images/controlunion.jpg" },
+                { name: "Egyptian Cotton", image: "assets/images/egyptian.jpg" },
+                { name: "GOTS", image: "assets/images/gots.jpg" },
+                { name: "Oeko-Tex", image: "assets/images/oekotex.jpg" },
+                { name: "Texprocil", image: "assets/images/texprocil.jpg" },
+            ]
+        },
+        facts: {
+            title: "",
+            description: "",
+            facts: [
+                { label: "Employees", value: 3000 },
+                { label: "Customers", value: 150 },
+                { label: "Tons Manufactured", value: 200000 },
+            ]
+        },
         sustainability: {
             title: 'Sustainability Efforts',
             description: 'Go Green and Save Nature',
