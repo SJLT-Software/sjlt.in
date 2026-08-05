@@ -1,81 +1,126 @@
-/* Custom Scrollbar for long content inside the cards */
-.custom-scrollbar::-webkit-scrollbar {
-    width: 6px;
-}
-.custom-scrollbar::-webkit-scrollbar-track {
-    background: transparent;
-}
-.custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: #dee2e6;
-    border-radius: 10px;
-}
-
-/* =========================================================
-   LAYOUT OPTION 1: VERTICAL STICKY STACKING (DEFAULT)
-   ========================================================= */
-/* .stack-container {
-    padding-bottom: 10vh; 
-}
-
-.cards-wrapper {
-    position: relative;
-}
-
-.stack-card {
-    position: sticky;
-    max-height: 80vh;
-    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
-    border: 1px solid rgba(0,0,0,0.05);
-}
- */
-
-/* =========================================================
-   LAYOUT OPTION 2: HORIZONTAL SCROLL SNAP
-   To use this, COMMENT OUT the "LAYOUT OPTION 1" section above, 
-   and UNCOMMENT the section below.
-   ========================================================= */
-
-
-.cards-wrapper {
+/* --- Flex Accordion Container --- */
+.flex-accordion-container {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 2rem;
-    padding-bottom: 2rem;
-    scrollbar-width: none; 
-}
-.cards-wrapper::-webkit-scrollbar {
-    display: none; 
-}
-.stack-card {
-    flex: 0 0 90%; 
-    scroll-snap-align: center;
-    max-height: 80vh;
-    margin-bottom: 0 !important; 
-    border: 1px solid rgba(0,0,0,0.05);
+    width: 100%;
+    height: 70vh;           /* Adjust height as needed */
+    min-height: 550px;
+    gap: 12px;              /* Space between tabs */
 }
 
+/* --- Individual Panels --- */
+.flex-panel {
+    position: relative;
+    flex: 0.5;              /* Collapsed width ratio */
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    transition: flex 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); /* Extremely smooth snap */
+    overflow: hidden;
+    cursor: pointer;
+}
 
-/* --- Mobile Responsiveness --- */
+/* The dark overlay for the background image */
+.panel-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6); /* Low opacity when closed */
+    transition: background 0.6s ease;
+    z-index: 1;
+}
+
+/* Active (Open) State */
+.flex-panel.active {
+    flex: 5;                /* Expanded width ratio */
+    cursor: default;
+}
+
+.flex-panel.active .panel-overlay {
+    background: rgba(0, 0, 0, 0.1); /* Brighter when open */
+}
+
+/* --- Closed State Title (Vertical Text) --- */
+.panel-closed-title {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+    transform-origin: bottom center;
+    white-space: nowrap;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+.letter-spacing-wide {
+    letter-spacing: 2px;
+}
+
+/* Hide closed title when panel is active */
+.flex-panel.active .panel-closed-title {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* --- Expanded Content Box --- */
+.panel-expanded-content {
+    position: absolute;
+    inset: 0;
+    padding: 2rem;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    transition-delay: 0s;
+}
+
+/* Show content only when active, with a slight delay for smooth reveal */
+.flex-panel.active .panel-expanded-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition-delay: 0.3s; 
+}
+
+/* Frosted Glass Effect for readability */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.5);
+    max-width: 600px;
+    max-height: 100%;
+    overflow-y: auto; /* Internal scroll if stats get too long */
+}
+
+/* Custom internal scrollbar */
+.custom-scrollbar::-webkit-scrollbar { width: 6px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background-color: rgba(0,0,0,0.2); border-radius: 10px; }
+
+/* --- Mobile Responsiveness (Vertical Accordion) --- */
 @media (max-width: 991.98px) {
-    .stack-card {
-        position: relative; /* Disables sticky/snap on mobile */
-        top: 0 !important; 
-        max-height: none;
-        flex: 1 1 100%;
+    .flex-accordion-container {
+        flex-direction: column; /* Stack vertically on phones */
+        height: 100vh;          /* Take up full screen height */
+        min-height: 700px;
     }
     
-    .stack-card .custom-scrollbar {
-        max-height: none !important;
-        overflow-y: visible !important;
+    .panel-closed-title {
+        /* Change vertical text to horizontal for mobile */
+        bottom: auto;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
     }
 
-    .stack-card .row {
-        flex-direction: column-reverse;
+    .panel-expanded-content {
+        padding: 1rem;
     }
-    
-    .stack-card .col-lg-6:nth-child(2) {
-        display: block !important;
-        min-height: 250px !important;
+
+    .glass-effect {
+        max-width: 100%;
     }
 }
