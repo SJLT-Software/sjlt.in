@@ -83,17 +83,16 @@ $(document).ready(function() {
         }
     });
 
-    $('a.nav-link, #back-to-top').on('click', function(event) {
-        if (this.hash !== "" || $(this).attr('id') === 'back-to-top') {
-            event.preventDefault();
-            var hash = this.hash || 'html';
-            $('html, body').animate({
-                scrollTop: hash === 'html' ? 0 : $(hash).offset().top - 80 
-            }, 600);
-            
-            // Close mobile menu on click
-            $('.navbar-collapse').collapse('hide');
-        }
+    $('a.nav-link').on('click', function() {
+        $('.navbar-collapse').collapse('hide');
+    });
+
+    $('#back-to-top').on('click', function(event) {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 
     // Impact Counters Animation Trigger
