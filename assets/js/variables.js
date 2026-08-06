@@ -163,6 +163,12 @@ const variables = {
         sustainability: {
             title: 'Sustainability Efforts',
             description: 'Go Green and Save Nature',
+            facts: [
+                { label: 'Carbon Footprint Reduction' , value: '20 CO2 Tons / Year' },
+                { label: 'Water Conservation' , value: '50,000 Liters / Year' },
+                { label: 'Energy Savings' , value: '100,000 kWh / Year' },
+                { label: 'Trees Planted' , value: '500 Trees / Year' },
+            ],
             subsections: [
                 {
                     title: "Solar Power",
@@ -178,11 +184,6 @@ const variables = {
                     title: "Rainwater Harvesting",
                     image: "assets/images/rainwater.jpg",
                     description: "We engage in traditional rainwater harvesting by collecting, storing, conserving and repurposing it for our employees, factory needs and for irrigation which would otherwise fall back onto the ground or drain away. Renewable water source also reduces the pressure on processed supply water which enhances the green living and lowers the ecological foot print."
-                },
-                {
-                    title: "Better Cotton Initiative",
-                    image: "assets/images/bci.jpg",
-                    description: "We are a member of the world’s leading sustainability organization that promotes sustainable cotton farming practices like proper crop protection, minimal water usage, ways to improve soil fertility and healthy labor management. There is also economic development in cotton communities while protecting and restoring the environment."
                 }
             ]
         },
@@ -204,6 +205,16 @@ const variables = {
                     title: 'Education',
                     image: 'assets/images/education.jpg',
                     description: 'We constantly thrive for social transformation and engaging with community by adopting neighbouring schools and providing them with necessary infrastructure like smart classrooms, regular classrooms and toilet facilities. Overall we actively participate in their development and well-being.'
+                },
+                {
+                    title: 'Woman Empowerment',
+                    image: 'assets/images/women.jpg',
+                    description: 'We are committed to empowering women in our community'
+                },
+                {
+                    title: 'Training Centers',
+                    image: 'assets/images/education.jpg',
+                    description: 'We have established training centers to provide skill development and vocational training to the local community. These centers offer courses in textile manufacturing, sewing, embroidery, and other relevant skills, enabling individuals to gain employment and improve their livelihoods.'
                 }
             ]
         }
