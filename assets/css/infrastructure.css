@@ -37,16 +37,25 @@
 }
 
 /* --- Closed State Title --- */
+/* --- Closed State Title --- */
 .panel-closed-title {
     position: absolute;
     bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%) rotate(-90deg);
-    transform-origin: bottom center;
-    white-space: nowrap;
+    left: 0;
+    width: 100%; /* Spans the exact width of the narrow collapsed column */
+    display: flex;
+    justify-content: center; /* Perfectly centers the vertical text */
     z-index: 2;
     transition: opacity 0.3s ease;
     opacity: 1;
+}
+
+.panel-closed-title h3 {
+    /* Natively renders the text vertically */
+    writing-mode: vertical-rl;
+    transform: rotate(180deg); /* Flips it so it reads from bottom to top */
+    white-space: nowrap;
+    margin: 0;
 }
 
 .letter-spacing-wide {
@@ -119,9 +128,14 @@
         bottom: auto;
         top: 50%;
         left: 20px;
-        transform: translateY(-50%); /* Horizontal text for closed mobile tabs */
+        width: auto;
+        transform: translateY(-50%);
     }
 
+    .panel-closed-title h3 {
+        writing-mode: horizontal-tb; /* Returns text to standard horizontal for mobile */
+        transform: none;             /* Removes the 180deg flip */
+    }
     .panel-expanded-content {
         padding: 1.5rem; 
         align-items: flex-start; /* Aligns to top so content doesn't awkwardly float in the center on phones */
