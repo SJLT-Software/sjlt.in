@@ -14,7 +14,7 @@
     background-size: cover;
     background-position: center;
     border-radius: 20px;
-    transition: flex 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: flex 0.9s cubic-bezier(0.25, 1, 0.5, 1);
     overflow: hidden;
     cursor: pointer;
 }
@@ -23,7 +23,7 @@
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.6); 
-    transition: background 0.6s ease;
+    transition: background 0.9s ease;
     z-index: 1;
 }
 
@@ -36,7 +36,6 @@
     background: rgba(0, 0, 0, 0.1);
 }
 
-/* --- Closed State Title --- */
 /* --- Closed State Title --- */
 .panel-closed-title {
     position: absolute;
@@ -71,15 +70,15 @@
 .panel-expanded-content {
     position: absolute;
     inset: 0;
-    padding: 3rem 2rem; /* Creates the padding gap top and bottom to the background image */
+    padding: 3rem 2rem; 
     z-index: 3;
     display: flex;
-    align-items: center; /* Centers the box vertically */
-    justify-content: center; /* Centers the box horizontally */
+    align-items: center; 
+    justify-content: center; 
     opacity: 0;
     visibility: hidden;
-    transform: translateY(20px);
-    transition: all 0.4s ease;
+    transform: translateY(40px);
+    transition: all 0.3s ease;
     transition-delay: 0s;
 }
 
@@ -87,7 +86,8 @@
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-    transition-delay: 0.3s; 
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    transition-delay: 0.4s; 
 }
 
 /* Frosted Glass Effect - Floating Box Design */
@@ -102,6 +102,7 @@
     max-height: 100%; /* Ensures the box never breaches the padding boundaries */
     overflow-y: auto; /* Invisible fail-safe scroll for extremely tiny screens */
     scrollbar-width: none; /* Hides the scrollbar for a clean look */
+    will-change: opacity, transform;
 }
 
 .glass-effect::-webkit-scrollbar {
